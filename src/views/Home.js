@@ -27,22 +27,22 @@ const Home = () => {
     });
   }, []);
 
-  function checkPokemon() {
+  const checkPokemon = () => {
     value.toUpperCase() === pokemons[number - 1].name.toUpperCase()
       ? setWinner(!winner)
       : setLoser(!loser);
     setShow(!show);
     setNext(!next);
     setValue("");
-  }
+  };
 
-  function getNewPokemon() {
+  const getNewPokemon = () => {
     setNumber(getRandomInt(150));
     setShow(!show);
     setLoser(false);
     setWinner(false);
     setNext(!next);
-  }
+  };
 
   return (
     <div>
